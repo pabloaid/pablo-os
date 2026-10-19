@@ -1,0 +1,5 @@
+build/
+limine/
+*.iso
+docs/
+README.md
