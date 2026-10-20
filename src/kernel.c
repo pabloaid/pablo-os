@@ -70,25 +70,25 @@ void kmain(void) {
     }
 
     struct limine_framebuffer *fb = framebuffer_request.response->framebuffers[0];
-    fb_init(fb, 0xE0E0E0, 0x101828);
+    fb_init(fb, 0x33FF66, 0x000000); // Set background color
 
     fb_set_scale(3);
-    fb_set_color(0x7FDBFF);
-    kprint("Hello from Pablo OS! I hope you are doing well.\n");
+    fb_set_color(0x00DC00); // Set title color
+    kprint("\n Hello from Pablo OS! \n");
 
     fb_set_scale(2);
-    fb_set_color(0xE0E0E0);
+    fb_set_color(0xFFFFFF); // Set text color
     kprint("\n");
 
     if (bootloader_info_request.response != NULL) {
-        kprint("Booted by ");
+        kprint(" Booted by ");
         kprint(bootloader_info_request.response->name);
         kprint(" ");
         kprint(bootloader_info_request.response->version);
         kprint("\n");
     }
 
-    kprint("Screen: ");
+    kprint(" Screen: ");
     kprint_dec(fb->width);
     kprint("x");
     kprint_dec(fb->height);
@@ -96,6 +96,6 @@ void kmain(void) {
     kprint_dec(fb->bpp);
     kprint(" bpp\n");
 
-    kprint("\nNothing else to do yet. Halting.\n");
+    kprint("\n Nothing else to do yet. Halting.\n");
     halt_forever();
 }
