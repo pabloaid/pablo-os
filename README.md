@@ -47,6 +47,8 @@ sync
 
 Then reboot, open your firmware's boot menu (usually F12, F11, F8 or Esc), and pick the USB stick. You may need to disable Secure Boot first. On Windows, [Rufus](https://rufus.ie) can write the ISO in "DD image" mode.
 
+For a step-by-step walkthrough of building, running and writing the USB stick, see [docs/BUILD-AND-RUN.md](docs/BUILD-AND-RUN.md).
+
 ## Layout
 
 ```
