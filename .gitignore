@@ -1,5 +1,5 @@
 build/
 limine/
 *.iso
-docs/
 README.md
+README-example.md
